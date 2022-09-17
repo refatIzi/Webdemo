@@ -41,6 +41,5 @@
   <i class="material-icons">arrow_backward</i>View
     on Behance</a><a href="http://localhost:8080" target="_blank">View on Github<i
         class="material-icons">arrow_forward</i></a></div>
-
 </body>
 </html>
