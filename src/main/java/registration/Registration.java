@@ -18,11 +18,7 @@ public class Registration extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
-        String uri = req.getRequestURI();
-
-        // resp.getWriter().write("Method doPost\nURI: " + uri + "\nParams:\n" + params + "\n");
-        //resp.getWriter().write("Method doPost\nURI: " + uri + "\n");
-
+       // String uri = req.getRequestURI();
         BufferedReader reader = req.getReader();
         int intValueOfChar;
         StringBuilder result = new StringBuilder();
