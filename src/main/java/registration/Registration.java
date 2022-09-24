@@ -25,7 +25,6 @@ public class Registration extends HttpServlet {
         while ((intValueOfChar = reader.read()) != -1) {
             result.append((char) intValueOfChar);
         }
-
         resp.setContentType("text/html");
         PrintWriter printWriter = resp.getWriter();
 

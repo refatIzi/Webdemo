@@ -1,5 +1,7 @@
 package chek;
 
+import db.Control;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -27,13 +29,27 @@ public class AuthorizationCheck extends HttpServlet {
         while ((intValueOfChar = reader.read()) != -1) {
             result.append((char) intValueOfChar);
         }
+        String[] people = result.toString().split("&");
 
-        resp.setContentType("text/html");
-        PrintWriter printWriter = resp.getWriter();
-
-        printWriter.println("<html>\n" + "<body>\n" + "<p>" + result.toString() + "</p>\n" + "</body>\n" + "</html>");
-        // printWriter.write("Page was visited " + visitCounter + " times.");
-        printWriter.close();
+         String user=people[0].replaceAll("(^[a-zA-Z]*=)", "");
+         String pass=people[1].replaceAll("(^[a-zA-Z]*=)", "");
+       Control control= new Control();
+        if(control.check(user+","+pass)) {
+            resp.setContentType("text/html");
+            PrintWriter printWriter = resp.getWriter();
+            printWriter.println("<html>\n" + "<body>\n" + "<p>" + user + "</p>\n" +
+                    "<p>" + pass + "</p>\n" +
+                    "</body>\n" + "</html>");
+            // printWriter.write("Page was visited " + visitCounter + " times.");
+            printWriter.close();
+        }else {
+            resp.setContentType("text/html");
+            PrintWriter printWriter = resp.getWriter();
+            printWriter.println("<html>\n" + "<body>\n" + "<p>No Authoristation"+user+","+pass+"</p>\n" +
+                    "</body>\n" + "</html>");
+            // printWriter.write("Page was visited " + visitCounter + " times.");
+            printWriter.close();
+        }
     }
 
 }
