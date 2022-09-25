@@ -19,7 +19,7 @@ public class AuthorizationCheck extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
 
-        BufferedReader reader = req.getReader();
+                BufferedReader reader = req.getReader();
         int intValueOfChar;
         StringBuilder result = new StringBuilder();
         while ((intValueOfChar = reader.read()) != -1) {

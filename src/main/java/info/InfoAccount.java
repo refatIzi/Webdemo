@@ -66,6 +66,7 @@ public class InfoAccount extends HttpServlet {
         for (String list : lists) {
             printWriter.println(info(list + " This account was created automatically. The data is not correct"));
         }
+
         printWriter.println(end);
         printWriter.close();
     }

@@ -112,6 +112,7 @@ body {
   height: 100%;
   width: auto;
 }
+
 #chat .chat__conversation-board__message__person__nickname {
   font-size: 9px;
   color: #484848;

@@ -14,6 +14,7 @@
         <div class="form-header">
             <h1>Account Login</h1>
         </div>
+
         <div class="form-content">
             <form method="post" action="authorization">
                 <div class="form-group">

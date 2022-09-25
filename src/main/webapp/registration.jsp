@@ -13,6 +13,8 @@
         <div class="form-header">
             <h1>Register Account</h1>
         </div>
+
+
         <div class="form-content">
             <form method="post" action="registration">
                 <div class="form-group">
