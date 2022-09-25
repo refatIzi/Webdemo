@@ -28,7 +28,7 @@ public class InfoAccount extends HttpServlet {
             "<!-- partial:index.partial.html -->\n" +
             "<div class=\"--dark-theme\" id=\"chat\">\n" +
             "  <div class=\"chat__conversation-board\">";
-    String end = "  </div>\n" +
+    String end = "</div>\n" +
             "  <div class=\"chat__conversation-panel\">\n" +
             "    <div class=\"chat__conversation-panel__container\">\n" +
             "      <form method=\"post\" action=\"account\">\n" +
@@ -61,34 +61,22 @@ public class InfoAccount extends HttpServlet {
     List<String> lists = new Control().getAccount();
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
-        String uri = req.getRequestURI();
-
-        // resp.getWriter().write("Method doPost\nURI: " + uri + "\nParams:\n" + params + "\n");
-        //resp.getWriter().write("Method doPost\nURI: " + uri + "\n");
-
-
-        resp.setContentType("text/html");
         PrintWriter printWriter = resp.getWriter();
         printWriter.println(start);
+        /**Тут выводяться список аккаунтов*/
         for (String list : lists) {
             printWriter.println(info(list + " This account was created automatically. The data is not correct"));
-
         }
         printWriter.println(end);
-        // printWriter.write("Page was visited " + visitCounter + " times.");
         printWriter.close();
-
     }
 
     @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
-        String uri = req.getRequestURI();
-
-        resp.setContentType("text/html");
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         PrintWriter printWriter = resp.getWriter();
         printWriter.println(start);
-          printWriter.println(end);
-        // printWriter.write("Page was visited " + visitCounter + " times.");
+        /**Тут будет поиск по запросу на аккаунт*/
+        printWriter.println(end);
         printWriter.close();
 
     }

@@ -29,6 +29,9 @@ public class AuthorizationCheck extends HttpServlet {
 
         String user = people[0].replaceAll("(^[a-zA-Z]*=)", "");
         String pass = people[1].replaceAll("(^[a-zA-Z]*=)", "");
+        /**Тут будет проварека данных через Базу данных mySQL с  него  бкдет считываться информация
+         * будет сравниваться если естьтакой такой пользователь
+         * к прмиеру будет сравнвиаться логин и парлль если есть совпадения будет перенаправлять на страницу списка акаунтов*/
         resp.sendRedirect("/account");
 
     }
