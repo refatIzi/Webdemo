@@ -28,7 +28,7 @@
                     <label class="form-remember">
                         <a class="form-recovery" href="http://localhost:8080/registration">Registration</a>
                     </label>
-                    <a class="form-recovery" href="#">Forgot Password?</a>
+                    <a class="form-recovery" href="http://localhost:8080/account">Forgot Password?</a>
                 </div>
                 <div class="form-group">
                     <button type="submit">Log In</button>

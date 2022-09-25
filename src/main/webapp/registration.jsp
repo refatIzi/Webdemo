@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-16">
     <title>Login Form - Modal</title>
     <link rel="stylesheet" href="css/style.css">
 </head>

@@ -17,11 +17,7 @@ import java.util.List;
 public class AuthorizationCheck extends HttpServlet {
 
     @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
-        String uri = req.getRequestURI();
-
-        // resp.getWriter().write("Method doPost\nURI: " + uri + "\nParams:\n" + params + "\n");
-        //resp.getWriter().write("Method doPost\nURI: " + uri + "\n");
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
 
         BufferedReader reader = req.getReader();
         int intValueOfChar;
@@ -31,25 +27,10 @@ public class AuthorizationCheck extends HttpServlet {
         }
         String[] people = result.toString().split("&");
 
-         String user=people[0].replaceAll("(^[a-zA-Z]*=)", "");
-         String pass=people[1].replaceAll("(^[a-zA-Z]*=)", "");
-       Control control= new Control();
-        if(control.check(user+","+pass)) {
-            resp.setContentType("text/html");
-            PrintWriter printWriter = resp.getWriter();
-            printWriter.println("<html>\n" + "<body>\n" + "<p>" + user + "</p>\n" +
-                    "<p>" + pass + "</p>\n" +
-                    "</body>\n" + "</html>");
-            // printWriter.write("Page was visited " + visitCounter + " times.");
-            printWriter.close();
-        }else {
-            resp.setContentType("text/html");
-            PrintWriter printWriter = resp.getWriter();
-            printWriter.println("<html>\n" + "<body>\n" + "<p>No Authoristation"+user+","+pass+"</p>\n" +
-                    "</body>\n" + "</html>");
-            // printWriter.write("Page was visited " + visitCounter + " times.");
-            printWriter.close();
-        }
+        String user = people[0].replaceAll("(^[a-zA-Z]*=)", "");
+        String pass = people[1].replaceAll("(^[a-zA-Z]*=)", "");
+        resp.sendRedirect("/account");
+
     }
 
 }
