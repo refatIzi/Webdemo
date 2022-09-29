@@ -1,13 +1,21 @@
+<%--
+  Created by IntelliJ IDEA.
+  User: refat
+  Date: 29.09.22
+  Time: 22:02
+  To change this template use File | Settings | File Templates.
+--%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Responsive Landing Page using HTML, CSS & Javascript</title>
 
     <!-- ==== STYLE.CSS ==== -->
-    <link rel="stylesheet" href="css/accountStyle.css" />
+    <link rel="stylesheet" href="css/accountStyle.css"/>
 
 </head>
 <body>
@@ -29,13 +37,13 @@
                     <a class="form-recovery" href="http://localhost:8080/account">Ваш акаунт</a>
                 </li>
                 <li class="nav_menu_item">
-                    <a class="form-recovery" href="http://localhost:8080/about" >О нас</a>
+                    <a class="form-recovery" href="http://localhost:8080/about">О нас</a>
                 </li>
                 <li class="nav_menu_item">
-                    <a href="#" class="form-recovery" >Наші послуги</a>
+                    <a href="#" class="form-recovery">Наші послуги</a>
                 </li>
                 <li class="nav_menu_item">
-                    <a href="#" class="form-recovery" >Контакти</a>
+                    <a href="#" class="form-recovery">Контакти</a>
                 </li>
             </ul>
         </div>
@@ -51,25 +59,20 @@
         <div class="grid-cols-2">
             <div class="grid-item-1">
                 <h1 class="main-heading">
-                    Ваша персональна <span> сторінка.</span>
-                    <br />
-                    Вася Пупкин.
+                    МИ <span> Люля кебаб и Айран.</span>
+
                 </h1>
                 <p class="info-text">
-                    Цей сайт створений для персональних клієнтів. Тут Ви можете побачити основну інформацію яка вам потрибна.
+                    Люля кебаб и Айран це розробка що дає можливість захистити себе в просторі люля кебаба и айрана.
+                    Ми є провідною компанією в  люля кебабе и айране.
+                    Люля кебаб и Айран це важлива розробка  яка вам потрібна. Вона є безкоштовною для ценітелей люля кебаб и айран
                 </p>
 
-                <div class="btn_wrapper">
-                    <button class="btn view_more_btn">
-                        Показати новий код <i class="ri-arrow-right-line"></i>
-                    </button>
 
-                    <button class="btn documentation_btn">завантажити сертіфікат з QR</button>
-                </div>
             </div>
             <div class="grid-item-2">
                 <div class="team_img_wrapper">
-                    <img src="./img/9c7.jpg" alt="team-img" />
+                    <img src="./img/team.svg" alt="team-img"/>
                 </div>
             </div>
         </div>
@@ -96,10 +99,10 @@
                 </div>
                 <div class="featured_info">
                     <a class="form-recovery" href="http://localhost:8080/app">
-                        <span>Завантажуй наш додаток </span>
-                        <p>
-                            За цим посилання ви можете завантажити наш додаток що допоможіть вам спілкуватися.
-                        </p>
+                    <span>Завантажуй наш додаток </span>
+                    <p>
+                        За цим посилання ви можете завантажити наш додаток що допоможіть вам спілкуватися.
+                    </p>
                     </a>
                 </div>
             </div>
@@ -120,9 +123,9 @@
                 <div class="featured_info">
                     <a class="form-recovery" href="http://localhost:8080/download">
                         <span>Завантажуйте цікаві матеріали</span>
-                        <p>
-                            Ви можете завантажити цікаві матеріали стосовно захисту вашої інформації!
-                        </p>
+                    <p>
+                        Ви можете завантажити цікаві матеріали стосовно захисту вашої інформації!
+                    </p>
                     </a>
                 </div>
             </div>
@@ -144,8 +147,8 @@
                 <div class="featured_info">
                     <a class="form-recovery" href="http://localhost:8080/ideas">
                         <span>Допоможіть нам в розробці</span>
-                        <p>
-                            Нам дуже цікаві ваші ідеї ваші пропозиції що до вдосконалення нашого проєкту. напишіть нам за цим посилання!</p></a>
+                    <p>
+                       Нам дуже цікаві ваші ідеї ваші пропозиції що до вдосконалення нашого проєкту. напишіть нам за цим посилання!</p></a>
 
                 </div>
             </div>
