@@ -2,6 +2,7 @@ package chek;
 
 import db.Control;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -17,7 +18,7 @@ import java.util.List;
 public class AuthorizationCheck extends HttpServlet {
 
     @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 
                 BufferedReader reader = req.getReader();
         int intValueOfChar;
@@ -29,10 +30,15 @@ public class AuthorizationCheck extends HttpServlet {
 
         String user = people[0].replaceAll("(^[a-zA-Z]*=)", "");
         String pass = people[1].replaceAll("(^[a-zA-Z]*=)", "");
+        System.out.println(user + " " + pass);
         /**Тут будет проварека данных через Базу данных mySQL с  него  бкдет считываться информация
          * будет сравниваться если естьтакой такой пользователь
          * к прмиеру будет сравнвиаться логин и парлль если есть совпадения будет перенаправлять на страницу списка акаунтов*/
-        resp.sendRedirect("/account");
+        //resp.sendRedirect("/account");
+        if(user.equals("qwerty")&&pass.equals("qwerty")){
+            RequestDispatcher requestDispatcher= req.getRequestDispatcher("/account.jsp");
+            requestDispatcher.forward(req,resp);
+        }
 
     }
 

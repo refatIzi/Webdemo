@@ -1,4 +1,11 @@
-<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%--
+  Created by IntelliJ IDEA.
+  User: refat
+  Date: 30.09.22
+  Time: 22:04
+  To change this template use File | Settings | File Templates.
+--%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -39,7 +46,7 @@
     </div>
 </div>
 <div class="pen-footer"><a href="http://localhost:8080" target="_blank">
-  <i class="material-icons">arrow_backward</i>View
+    <i class="material-icons">arrow_backward</i>View
     on Behance</a><a href="http://localhost:8080" target="_blank">View on Github<i
         class="material-icons">arrow_forward</i></a></div>
 </body>
