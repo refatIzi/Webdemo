@@ -2,12 +2,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
     <!-- ==== STYLE.CSS ==== -->
-    <link rel="stylesheet" href="css/accountStyle.css" />
+    <link rel="stylesheet" href="css/accountStyle.css"/>
 
 </head>
 <body>
@@ -29,13 +29,13 @@
                     <a class="form-recovery" href="http://localhost:8080/account">Ваш акаунт</a>
                 </li>
                 <li class="nav_menu_item">
-                    <a class="form-recovery" href="http://localhost:8080/about" >О нас</a>
+                    <a class="form-recovery" href="http://localhost:8080/about">О нас</a>
                 </li>
                 <li class="nav_menu_item">
-                    <a href="#" class="form-recovery" >Наші послуги</a>
+                    <a href="#" class="form-recovery">Наші послуги</a>
                 </li>
                 <li class="nav_menu_item">
-                    <a href="#" class="form-recovery" >Контакти</a>
+                    <a href="#" class="form-recovery">Контакти</a>
                 </li>
             </ul>
         </div>
@@ -52,24 +52,34 @@
             <div class="grid-item-1">
                 <h1 class="main-heading">
                     Ваша персональна <span> сторінка.</span>
-                    <br />
+                    <br/>
                     Вася Пупкин.
                 </h1>
                 <p class="info-text">
-                    Цей сайт створений для персональних клієнтів. Тут Ви можете побачити основну інформацію яка вам потрибна.
+                    Цей сайт створений для персональних клієнтів. Тут Ви можете побачити основну інформацію яка вам
+                    потрибна.
                 </p>
 
                 <div class="btn_wrapper">
-                    <button class="btn view_more_btn">
-                        Показати новий код <i class="ri-arrow-right-line"></i>
-                    </button>
+                    <button class="btn view_more_btn" type="submit">
+                        Створити новий код <i class="ri-arrow-right-line">
 
-                    <button class="btn documentation_btn">завантажити сертіфікат з QR</button>
+                    </i>
+                    </button>
+                    <form method="post" action="account">
+                        <%@page import="generation.GenerationQR" %>
+                        <%GenerationQR generationQR = new GenerationQR();%>
+                        <input type="hidden" name="QRCode" value="<%=generationQR.getQR()%>"/>
+                        <button class="btn documentation_btn">завантажити сертифікат з QR
+                        </button>
+                    </
+                    >
+
                 </div>
             </div>
             <div class="grid-item-2">
                 <div class="team_img_wrapper">
-                    <img src="./img/9c7.jpg" alt="team-img" />
+                    <img src="./img/9c7.jpg" alt="team-img"/>
                 </div>
             </div>
         </div>
@@ -81,11 +91,9 @@
         <div class="grid-cols-3">
             <div class="grid-col-item">
                 <div class="icon">
-
-                    <svg
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke="currentColor"
+                    <svg fill="none"
+                         viewBox="0 0 24 24"
+                         stroke="currentColor"
                     >
                         <path
                                 stroke-linecap="round"
@@ -145,7 +153,8 @@
                     <a class="form-recovery" href="http://localhost:8080/ideas">
                         <span>Допоможіть нам в розробці</span>
                         <p>
-                            Нам дуже цікаві ваші ідеї ваші пропозиції що до вдосконалення нашого проєкту. напишіть нам за цим посилання!</p></a>
+                            Нам дуже цікаві ваші ідеї ваші пропозиції що до вдосконалення нашого проєкту. напишіть нам
+                            за цим посилання!</p></a>
 
                 </div>
             </div>
